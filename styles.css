@@ -6,6 +6,8 @@
 
 }
 
+
+
 html {
     font-size: 16px;
 }
@@ -72,8 +74,9 @@ main {
 
 .gallery {
     grid-area: gallery;
-    padding: 1rem;
+    max-width: 100%;
     background-color: #666666;
+    padding: 1rem;
 }
 
 .team-members {
@@ -113,14 +116,18 @@ main {
         display: none;
     }
 
+    main {
+        display: block;
+    }
+
     .image-container {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory; /*horizontal scrolling (x), must snap to nearest snap point set on children*/
-        max-width: 100vw;/*ensures container does not grow beyond the viewport*/
+        width: 100%;
         
     }
-
+    
     .card {
         flex: 0 0 50vh;
         scroll-snap-align: center;/*sets a point for scrolling to snap to*/
